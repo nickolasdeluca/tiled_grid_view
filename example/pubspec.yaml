@@ -1,0 +1,21 @@
+name: example
+description: Example app for tiled_grid_view package
+
+publish_to: 'none'
+
+environment:
+  sdk: ^3.10.7
+
+dependencies:
+  flutter:
+    sdk: flutter
+  tiled_grid_view:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
