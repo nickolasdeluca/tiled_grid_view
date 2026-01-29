@@ -65,7 +65,7 @@ class TileMenu extends StatelessWidget {
               _buildWarningMessage(currentRowFlex, maxFlexPerRow, i, tile),
             );
           } else {
-            rows.add(const Divider(height: 10));
+            rows.add(const Divider(height: 10, color: Colors.transparent));
           }
 
           currentRow = [];
@@ -78,7 +78,7 @@ class TileMenu extends StatelessWidget {
 
       if (currentRowFlex == maxFlexPerRow) {
         rows.add(_buildRow(currentRow));
-        rows.add(const Divider(height: 10));
+        rows.add(const Divider(height: 10, color: Colors.transparent));
         currentRow = [];
         currentRowFlex = 0;
       }
@@ -111,7 +111,7 @@ class TileMenu extends StatelessWidget {
       child: Row(
         children: [
           const Icon(Icons.error, color: Colors.white, size: 20),
-          const VerticalDivider(),
+          const VerticalDivider(color: Colors.transparent),
           Expanded(
             child: Text(
               message,
@@ -150,7 +150,7 @@ class TileMenu extends StatelessWidget {
       child: Row(
         children: [
           const Icon(Icons.warning, color: Colors.black, size: 20),
-          const VerticalDivider(),
+          const VerticalDivider(color: Colors.transparent),
           Expanded(
             child: Text(
               message,

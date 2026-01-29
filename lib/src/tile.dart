@@ -27,6 +27,8 @@ class Tile extends StatelessWidget {
     this.icon,
     this.flex = 1,
     this.onPressed,
+    this.width = 120,
+    this.height = 120,
   });
 
   /// The text label displayed on the tile.
@@ -51,6 +53,10 @@ class Tile extends StatelessWidget {
   /// Called when the tile is pressed.
   final VoidCallback? onPressed;
 
+  final double? width;
+
+  final double? height;
+
   @override
   Widget build(BuildContext context) {
     final backgroundColor = color ?? Colors.white;
@@ -59,21 +65,29 @@ class Tile extends StatelessWidget {
         : Colors.white;
 
     return SizedBox(
-      height: 120,
-      child: OutlinedButton.icon(
-        icon: icon != null ? Icon(icon, color: foregroundColor) : null,
-        label: Text(
-          label,
-          textAlign: .center,
-          style: TextStyle(color: foregroundColor),
+      height: height,
+      width: width,
+      child: Material(
+        color: backgroundColor,
+        child: InkWell(
+          onTap: onPressed,
+          child: Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                if (icon != null) ...[
+                  Icon(icon, color: foregroundColor),
+                  const SizedBox(height: 5),
+                ],
+                Text(
+                  label,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: foregroundColor),
+                ),
+              ],
+            ),
+          ),
         ),
-        style: ButtonStyle(
-          elevation: .all(0),
-          shape: .all(const RoundedRectangleBorder(borderRadius: .zero)),
-          backgroundColor: .all(backgroundColor),
-          side: .all(.none),
-        ),
-        onPressed: onPressed,
       ),
     );
   }

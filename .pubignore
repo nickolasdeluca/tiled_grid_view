@@ -1,0 +1,11 @@
+# Cache e arquivos temporários
+
+build/
+.dart_tool/
+
+## Arquivos de Preview e IDE
+
+lib/preview.dart
+*.iml
+.idea/
+.vscode/
