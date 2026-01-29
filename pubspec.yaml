@@ -1,6 +1,6 @@
 name: tiled_grid_view
 description: A flexible tiled grid view layout system for Flutter with automatic row distribution and layout warnings.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/nickolasdeluca/tiled_grid_view
 repository: https://github.com/nickolasdeluca/tiled_grid_view
 issue_tracker: https://github.com/nickolasdeluca/tiled_grid_view/issues

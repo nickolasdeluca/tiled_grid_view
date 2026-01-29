@@ -11,6 +11,7 @@ A flexible tiled grid view layout system for Flutter with automatic row distribu
 - **Easy Integration**: Simple API for creating grid-based menu layouts
 
 ## Screen capture
+
 ![Screen capture of the package](https://github.com/user-attachments/assets/1797f7ba-7301-414f-86d7-9e6b4d7b36e9)
 
 ## Getting Started
